@@ -31,6 +31,17 @@
         <br>
         <button type="submit">Envoyer</button>
     </form>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            dataLayer.push({
+                'event': 'formSubmission',
+                'formId': 'contact-form',
+                'formName': document.getElementById('name').value,
+                'formEmail': document.getElementById('email').value,
+                'formMessage': document.getElementById('message').value
+            });
+        });
+        </script>
 
 
 </body>
